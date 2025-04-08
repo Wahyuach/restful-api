@@ -13,6 +13,6 @@ Route::middleware(['jwt.auth'])->group(function () {
     Route::get('/me', [AuthController::class, 'me']);
     Route::post('/logout', [AuthController::class, 'logout']);
 
-    // Protected StudentController Routes
+    // StudentController Routes
     Route::apiResource('/students', StudentController::class);
 });
